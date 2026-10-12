@@ -67,6 +67,7 @@ body { font-family: 'Poppins', sans-serif; background: var(--gradient-main); col
 .profile-wrapper { position: relative; display: flex; justify-content: center; align-items: center; }
 .profile-ring { width: 320px; height: 320px; border-radius: 50%; background: conic-gradient(from 0deg, #C8A2FF, #FFD6E8, #B388FF, #C8A2FF); padding: 5px; animation: spinSlow 8s linear infinite; box-shadow: 0 0 60px rgba(200,162,255,0.35); }
 .profile-inner { width: 100%; height: 100%; border-radius: 50%; background: var(--gradient-hero); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.hero-megaphone { width: 88%; height: 88%; object-fit: contain; border-radius: 50%; }
 .profile-placeholder { width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #ede7ff, #ffd6e8); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; }
 .profile-placeholder i { font-size: 5rem; color: var(--lavender); }
 .profile-placeholder span { font-size: 0.78rem; font-weight: 500; color: var(--text-light); }
@@ -155,6 +156,14 @@ section { padding: 5rem 0; }
 .pg-4 { background: linear-gradient(135deg, #f0a8d0, #C8A2FF); }
 .pg-5 { background: linear-gradient(135deg, #a875f5, #FFD6E8); }
 .pg-6 { background: linear-gradient(135deg, #7C4DFF, #B388FF); }
+
+/* WEBDEV ACTIVITIES */
+#webdev-activities { background: linear-gradient(180deg, #fff0f7 0%, #f3eaff 100%); }
+.activity-card { background: var(--glass-bg); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; padding: 1.8rem 1.3rem; text-align: center; transition: all 0.35s ease; box-shadow: var(--shadow-card); height: 100%; }
+.activity-card:hover { transform: translateY(-7px); box-shadow: var(--shadow-soft); border-color: rgba(200,162,255,0.4); }
+.activity-icon { width: 64px; height: 64px; border-radius: 18px; background: var(--gradient-btn); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.1rem; font-size: 1.6rem; color: white; box-shadow: 0 8px 24px rgba(200,162,255,0.3); }
+.activity-card h3 { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.6rem; }
+.activity-card p { font-size: 0.82rem; color: var(--text-light); line-height: 1.65; margin-bottom: 0.8rem; }
 
 /* ACHIEVEMENTS */
 #achievements { background: linear-gradient(180deg, #fce4f0 0%, #f3eaff 100%); }
