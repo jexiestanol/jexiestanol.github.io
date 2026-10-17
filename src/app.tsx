@@ -352,7 +352,6 @@ export default function App() {
       <aside className="side-rail" aria-label="Portfolio navigation">
         <a className="brand-mark" href="#home" aria-label="Jexi portfolio home">
           <span className="brand-symbol"><span className="brand-logo" /></span>
-          <span className="brand-wordmark"><b>Jexi</b><small>Creative portfolio</small></span>
         </a>
         <nav>
           <a className={activeSection === 'about' ? 'active' : ''} href="#about">

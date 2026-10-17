@@ -2306,11 +2306,11 @@ main {
 }
 
 .side-rail .brand-mark {
-  width: 170px;
+  width: 78px;
   height: 58px;
   display: flex;
-  justify-content: flex-start;
-  gap: 11px;
+  justify-content: center;
+  gap: 0;
   align-items: center;
   padding: 0;
   background: transparent;
@@ -2329,8 +2329,8 @@ main {
 
 .brand-symbol {
   position: relative;
-  width: 53px;
-  height: 47px;
+  width: 70px;
+  height: 56px;
   display: grid;
   place-items: center;
   flex: 0 0 auto;
@@ -2486,11 +2486,7 @@ main {
 
 @media (max-width: 900px) {
   .side-rail .brand-mark {
-    width: 56px;
-  }
-
-  .brand-wordmark {
-    display: none;
+    width: 70px;
   }
 
   .side-rail .nav-cta {
@@ -2507,14 +2503,14 @@ main {
 
 @media (max-width: 760px) {
   .side-rail .brand-mark {
-    width: 43px;
-    height: 39px;
+    width: 52px;
+    height: 45px;
   }
 
   .brand-symbol {
-    width: 43px;
-    height: 39px;
-    padding: 7px 6px;
+    width: 50px;
+    height: 43px;
+    padding: 7px;
     border-radius: 10px;
     box-shadow: none;
     transform: none;
@@ -5330,4 +5326,29 @@ main {
 .side-rail > nav::after {
   display: none !important;
   content: none !important;
+}
+
+/* Show the portfolio immediately instead of typing/sliding it into view. */
+.hero-title-wrap,
+.scene-window,
+.scene-preview-card,
+.scene-sticker-code,
+.scene-sticker-star {
+  animation: none !important;
+}
+
+.scene-editor > strong span,
+.scene-editor > strong em {
+  clip-path: none;
+  animation: none !important;
+}
+
+.scene-editor > strong::after {
+  display: none;
+  animation: none !important;
+}
+
+.scene-code-lines i {
+  transform: none;
+  animation: none !important;
 }
