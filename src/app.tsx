@@ -418,12 +418,7 @@ export default function App() {
             <div className="binder-clip" aria-hidden="true" />
             <figure className="formal-photo-frame">
               <div className="formal-photo-placeholder">
-                <svg viewBox="0 0 180 220" aria-hidden="true">
-                  <circle cx="90" cy="72" r="38" />
-                  <path d="M38 197c3-52 23-81 52-81s49 29 52 81M65 119l25 31 25-31M90 150v47" />
-                </svg>
-                <span>Formal photo</span>
-                <small>Your portrait goes here</small>
+                <img src="/assets/profile.jpg" alt="Portrait of Jexi" />
               </div>
               <figcaption>Profile portrait · 4:5 ratio</figcaption>
             </figure>
