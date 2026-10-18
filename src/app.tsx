@@ -112,6 +112,18 @@ function SocialIcon({ name }: { name: 'github' | 'facebook' | 'instagram' }) {
   )
 }
 
+function IntroScreen() {
+  return (
+    <div className="intro-screen" aria-hidden="true">
+      <div className="intro-loading">
+        <p>Welcome to Jexi&apos;s Portfolio</p>
+        <div className="intro-progress"><span /></div>
+        <small>Loading portfolio...</small>
+      </div>
+    </div>
+  )
+}
+
 function NavDoodle({ type }: { type: 'about' | 'work' | 'skills' | 'contact' }) {
   const drawings = {
     about: (
@@ -402,6 +414,7 @@ export default function App() {
 
   return (
     <div className="site-shell">
+      <IntroScreen />
       <div className="scroll-progress" aria-hidden="true" />
       <div className="cursor-orbit" ref={cursorRef} aria-hidden="true" />
       <div className="ambient-glow" aria-hidden="true" />
@@ -432,7 +445,7 @@ export default function App() {
       <main id="home">
         <section className="hero page-panel" aria-labelledby="hero-title">
           <div className="hero-topline">
-            <span>Based in Batangas · GMT +8</span>
+            <span>Website Development</span>
             <span>Portfolio · 2025</span>
           </div>
 
@@ -468,7 +481,6 @@ export default function App() {
               Now in my third year, I&apos;m building a strong foundation in programming, database management,
               and interface design—with the goal of becoming a full-stack developer.
             </p>
-            <div className="signature">Jexi</div>
           </article>
 
           <article className="profile-sheet paper-card">
@@ -477,7 +489,7 @@ export default function App() {
               <div className="formal-photo-placeholder">
                 <img src="/assets/profile.jpg" alt="Portrait of Jexi" />
               </div>
-              <figcaption>Profile portrait · 4:5 ratio</figcaption>
+              <figcaption>hey! it's jexi</figcaption>
             </figure>
             <SectionLabel>Quick profile</SectionLabel>
             <h3>The person behind the pixels</h3>
@@ -489,7 +501,6 @@ export default function App() {
               <div><dt>Interests</dt><dd>Web dev, UI/UX, photography, design</dd></div>
             </dl>
             <div className="profile-stats">
-              <span><b>6+</b> projects</span>
               <span><b>3rd</b> year</span>
             </div>
           </article>
@@ -500,7 +511,7 @@ export default function App() {
         <section className="work-section page-panel" id="projects" aria-labelledby="projects-title">
           <header className="section-heading">
             <div>
-              <SectionLabel>Selected works · 2023—2025</SectionLabel>
+              <SectionLabel>Selected works · 2024—2026</SectionLabel>
               <h2 id="projects-title">Project <em>archive</em></h2>
             </div>
             <p>Four projects exploring systems, storytelling, visual design, and community.</p>
@@ -617,15 +628,9 @@ export default function App() {
               <div><dt>Availability</dt><dd>Open for opportunities</dd></div>
             </dl>
             <div className="social-row">
-              <a href="https://github.com/jexiestanol" target="_blank" rel="noreferrer" aria-label="GitHub">
-                <SocialIcon name="github" />
-              </a>
-              <a href="https://www.facebook.com/jexequiel.estanol.5" target="_blank" rel="noreferrer" aria-label="Facebook">
-                <SocialIcon name="facebook" />
-              </a>
-              <a href="https://www.instagram.com/_jexii.e/" target="_blank" rel="noreferrer" aria-label="Instagram">
-                <SocialIcon name="instagram" />
-              </a>
+              <a href="https://github.com/jexiestanol" target="_blank" rel="noreferrer" aria-label="GitHub"><SocialIcon name="github" /></a>
+              <a href="https://www.facebook.com/jexequiel.estanol.5" target="_blank" rel="noreferrer" aria-label="Facebook"><SocialIcon name="facebook" /></a>
+              <a href="https://www.instagram.com/_jexii.e/" target="_blank" rel="noreferrer" aria-label="Instagram"><SocialIcon name="instagram" /></a>
             </div>
             <div className="contact-checklist" aria-label="What I look for">
               <p>What I look for</p>
@@ -638,7 +643,7 @@ export default function App() {
         </section>
 
         <footer>
-          <p>© 2025 Jexequiel M. Estanol</p>
+          <p>© 2026 Jexequiel M. Estanol</p>
           <p>Designed with curiosity · Built with intention</p>
         </footer>
       </main>
