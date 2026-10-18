@@ -124,7 +124,7 @@ function IntroScreen() {
   )
 }
 
-function NavDoodle({ type }: { type: 'about' | 'work' | 'skills' | 'contact' }) {
+function NavDoodle({ type }: { type: 'about' | 'work' | 'skills' | 'activities' | 'contact' }) {
   const drawings = {
     about: (
       <>
@@ -142,6 +142,12 @@ function NavDoodle({ type }: { type: 'about' | 'work' | 'skills' | 'contact' }) 
       <>
         <path d="m30 8 5 12 13 2-10 9 3 13-11-7-11 7 3-13-10-9 13-2z" />
         <path d="M9 45h13M38 45h13" />
+      </>
+    ),
+    activities: (
+      <>
+        <path d="M12 17h36v29H12zM12 17v-6h14l5 6M19 24h22M19 31h22M19 38h15" />
+        <path d="m7 22-4-4M53 22l4-4" />
       </>
     ),
     contact: (
@@ -433,6 +439,9 @@ export default function App() {
           <a className={activeSection === 'skills' ? 'active' : ''} href="#skills">
             <NavDoodle type="skills" /><span>Skills</span><i className="nav-hand-ring" />
           </a>
+          <a className={activeSection === 'activities' ? 'active' : ''} href="#activities">
+            <NavDoodle type="activities" /><span>Activities</span><i className="nav-hand-ring" />
+          </a>
           <a className={activeSection === 'contact' ? 'active' : ''} href="#contact">
             <NavDoodle type="contact" /><span>Contact</span><i className="nav-hand-ring" />
           </a>
@@ -568,7 +577,7 @@ export default function App() {
           </article>
         </section>
 
-        <section className="activity-archive page-panel" aria-labelledby="activities-title">
+        <section className="activity-archive page-panel" id="activities" aria-labelledby="activities-title">
           <header className="activity-archive-heading">
             <div>
               <SectionLabel>Practice &amp; progress</SectionLabel>
