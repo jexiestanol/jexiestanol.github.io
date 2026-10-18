@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#f2d1d4" />
+  <rect x="55" y="55" width="402" height="402" rx="88" fill="none" stroke="#d8959b" stroke-width="12" />
+  <image href="/assets/jexi-mark.png" x="100" y="142" width="312" height="233" />
+</svg>

@@ -86,6 +86,32 @@ function ArrowIcon({ up = false }: { up?: boolean }) {
   )
 }
 
+function SocialIcon({ name }: { name: 'github' | 'facebook' | 'instagram' }) {
+  if (name === 'github') {
+    return (
+      <svg className="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path className="social-icon-solid" d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.08c-3.1.67-3.76-1.32-3.76-1.32-.51-1.29-1.24-1.64-1.24-1.64-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 .1.61 2.3 4.15 1.61.1-.73.39-1.23.7-1.52-2.48-.28-5.08-1.24-5.08-5.52 0-1.22.44-2.22 1.16-3-.12-.29-.5-1.42.11-2.96 0 0 .95-.3 3.05 1.15a10.6 10.6 0 0 1 5.56 0c2.11-1.43 3.05-1.15 3.05-1.15.61 1.54.23 2.67.11 2.96.72.78 1.16 1.78 1.16 3 0 4.29-2.6 5.23-5.09 5.5.4.35.75 1.02.75 2.06v3.05c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z" />
+      </svg>
+    )
+  }
+
+  if (name === 'facebook') {
+    return (
+      <svg className="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path className="social-icon-solid" d="M24 12a12 12 0 1 0-13.88 11.86v-8.39H7.08V12h3.04V9.35c0-3 1.79-4.66 4.52-4.66 1.31 0 2.68.23 2.68.23v2.95h-1.51c-1.49 0-1.96.93-1.96 1.88V12h3.34l-.53 3.47h-2.81v8.39A12 12 0 0 0 24 12Z" />
+      </svg>
+    )
+  }
+
+  return (
+    <svg className="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle className="social-icon-solid" cx="17.5" cy="6.8" r="1.1" />
+    </svg>
+  )
+}
+
 function NavDoodle({ type }: { type: 'about' | 'work' | 'skills' | 'contact' }) {
   const drawings = {
     about: (
@@ -235,6 +261,37 @@ function ProjectArtwork({ number, name }: { number: string; name: string }) {
           <span>Discover the beauty of the Philippines</span>
           <strong>{name}</strong>
         </div>
+      </div>
+    )
+  }
+
+  if (number === '03') {
+    return (
+      <div className="pretty-project-cover" aria-hidden="true">
+        <header className="pretty-shop-nav">
+          <strong>PRETTY <span>BY JEXI</span></strong>
+          <nav><span>SHOP</span><span>OUR STORY</span></nav>
+          <i>♡</i>
+        </header>
+        <div className="pretty-shop-hero">
+          <div className="pretty-shop-copy">
+            <span className="pretty-shop-kicker">A LITTLE PRETTY GOES A LONG WAY</span>
+            <h4>Made to make<br />you feel <em>pretty.</em></h4>
+            <span className="pretty-shop-button">SHOP THE COLLECTION <b>↗</b></span>
+            <small>Handmade with love · Est. by Jexi</small>
+          </div>
+          <div className="pretty-product-stage">
+            <i className="pretty-sparkle pretty-sparkle-one">✳</i>
+            <i className="pretty-sparkle pretty-sparkle-two">✦</i>
+            <div className="pretty-product-card">
+              <span className="pretty-product-label">THE EVERYDAY BOW</span>
+              <div className="pretty-bow"><i /><i /><b /></div>
+              <span className="pretty-product-price">YOUR NEW FAVORITE ♡</span>
+            </div>
+            <span className="pretty-sticker">MADE<br />WITH LOVE</span>
+          </div>
+        </div>
+        <div className="pretty-shop-footer"><span>PRETTY THINGS, MADE BY HAND</span><i /><span>HAIR CLIPS · ACCESSORIES · JOY</span></div>
       </div>
     )
   }
@@ -560,10 +617,15 @@ export default function App() {
               <div><dt>Availability</dt><dd>Open for opportunities</dd></div>
             </dl>
             <div className="social-row">
-              <a href="#contact">GitHub</a>
-              <a href="#contact">LinkedIn</a>
-              <a href="#contact">Facebook</a>
-              <a href="#contact">Instagram</a>
+              <a href="https://github.com/jexiestanol" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <SocialIcon name="github" />
+              </a>
+              <a href="https://www.facebook.com/jexequiel.estanol.5" target="_blank" rel="noreferrer" aria-label="Facebook">
+                <SocialIcon name="facebook" />
+              </a>
+              <a href="https://www.instagram.com/_jexii.e/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <SocialIcon name="instagram" />
+              </a>
             </div>
             <div className="contact-checklist" aria-label="What I look for">
               <p>What I look for</p>

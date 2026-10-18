@@ -642,8 +642,10 @@ em { color: var(--pink); font-style: normal; font-weight: inherit; }
 .contact-details dd { margin: 0; font-family: 'Manrope', sans-serif; font-size: 19px; font-weight: 700; }
 .contact-details a { text-decoration: none; }
 .social-row { display: flex; flex-wrap: wrap; gap: 8px; }
-.social-row a { padding: 9px 12px; background: white; border-radius: 30px; font-size: 8px; font-weight: 800; text-transform: uppercase; }
+.social-row a { display: grid; width: 42px; height: 42px; place-items: center; padding: 9px; background: white; border-radius: 30px; }
 .social-row a:hover { background: var(--plum); color: white; }
+.social-icon { position: relative; z-index: 1; display: block; width: 21px; height: 21px; }
+.social-icon-solid { fill: currentColor; stroke: none; }
 .small-print { margin: 30px 0 0; color: #766776; font-size: 11px; }
 .contact-checklist {
   margin-top: 35px;
@@ -4541,6 +4543,101 @@ main {
   width: 74%;
   border-radius: 45% 55% 48% 52%;
 }
+
+/* Pretty by Jexi storefront artwork */
+.pretty-project-cover {
+  position: absolute;
+  inset: 14px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: clamp(13px, 2vw, 22px);
+  background: #f5f0ff;
+  border: 2px solid #4a2b69;
+  color: #39204f;
+  box-shadow: 9px 10px 0 rgba(49, 30, 71, .17);
+  transform: rotate(-1deg);
+  transition: transform 350ms cubic-bezier(.34,1.56,.64,1), box-shadow 350ms ease;
+}
+
+.project-card:hover .pretty-project-cover {
+  box-shadow: 13px 14px 0 rgba(49, 30, 71, .22);
+  transform: rotate(0) scale(1.025);
+}
+
+.pretty-shop-nav,
+.pretty-shop-nav nav,
+.pretty-shop-footer {
+  display: flex;
+  align-items: center;
+}
+
+.pretty-shop-nav {
+  position: relative;
+  z-index: 2;
+  justify-content: space-between;
+  min-height: 22px;
+  border-bottom: 1px solid rgba(74, 43, 105, .2);
+  padding-bottom: 8px;
+}
+
+.pretty-shop-nav > strong {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(10px, 1.35vw, 15px);
+  font-weight: 800;
+  letter-spacing: -.08em;
+}
+
+.pretty-shop-nav > strong span {
+  margin-left: 3px;
+  color: #9b70c3;
+  font-family: 'Patrick Hand', cursive;
+  font-size: .8em;
+  font-weight: 400;
+  letter-spacing: .04em;
+}
+
+.pretty-shop-nav nav { gap: clamp(8px, 1.7vw, 22px); }
+.pretty-shop-nav nav span,
+.pretty-shop-footer span { font-size: clamp(5px, .62vw, 7px); font-weight: 800; letter-spacing: .1em; }
+.pretty-shop-nav > i { font-size: 15px; font-style: normal; }
+
+.pretty-shop-hero {
+  position: relative;
+  display: grid;
+  flex: 1;
+  grid-template-columns: 1fr .95fr;
+  align-items: center;
+  min-height: 0;
+}
+
+.pretty-shop-copy { position: relative; z-index: 2; padding: 10px 0 10px 3%; }
+.pretty-shop-kicker { color: #916db0; font-size: clamp(5px, .62vw, 7px); font-weight: 800; letter-spacing: .14em; }
+.pretty-shop-copy h4 { margin: 10px 0 13px; color: #39204f; font-family: Georgia, serif; font-size: clamp(22px, 3.8vw, 48px); font-weight: 400; letter-spacing: -.07em; line-height: .94; }
+.pretty-shop-copy h4 em { color: #9365bd; font-weight: 400; }
+.pretty-shop-button { display: inline-flex; align-items: center; gap: 13px; padding: 8px 10px; background: #563773; color: #fff; font-size: clamp(5px, .62vw, 7px); font-weight: 800; letter-spacing: .08em; }
+.pretty-shop-button b { font-size: 11px; }
+.pretty-shop-copy > small { display: block; margin-top: 12px; color: #836b95; font-family: 'Patrick Hand', cursive; font-size: clamp(8px, 1vw, 12px); }
+
+.pretty-product-stage { position: relative; display: grid; min-width: 0; height: 100%; place-items: center; }
+.pretty-product-stage::before { position: absolute; width: min(76%, 210px); aspect-ratio: 1; background: #e6d8f4; border-radius: 50%; content: ''; }
+.pretty-product-card { position: relative; z-index: 1; display: flex; width: min(72%, 172px); min-width: 90px; aspect-ratio: .78; align-items: center; flex-direction: column; justify-content: space-between; padding: 10px 8px; background: #fff; border: 1px solid rgba(74,43,105,.12); box-shadow: 0 10px 24px rgba(74,43,105,.15); transform: rotate(5deg); }
+.pretty-product-label,.pretty-product-price { color: #836b95; font-size: clamp(4px, .54vw, 6px); font-weight: 800; letter-spacing: .12em; text-align: center; }
+.pretty-bow { position: relative; display: flex; width: 76%; align-items: center; justify-content: center; filter: drop-shadow(0 7px 5px rgba(62,36,86,.18)); }
+.pretty-bow i { width: 44%; aspect-ratio: 1.06; background: linear-gradient(145deg, #c8a9e5, #8a5eb1); border: 1px solid #704895; }
+.pretty-bow i:first-child { border-radius: 80% 18% 64% 30%; transform: rotate(17deg); }
+.pretty-bow i:nth-child(2) { border-radius: 18% 80% 30% 64%; transform: rotate(-17deg); }
+.pretty-bow b { position: absolute; width: 18%; aspect-ratio: .8; background: #744a98; border: 1px solid #563773; border-radius: 45%; }
+.pretty-sparkle { position: absolute; z-index: 2; color: #9c73bf; font-size: clamp(12px, 2vw, 22px); font-style: normal; }
+.pretty-sparkle-one { top: 16%; left: 8%; }
+.pretty-sparkle-two { right: 8%; bottom: 18%; color: #c09bdd; }
+.pretty-sticker { position: absolute; z-index: 2; right: 0; bottom: 15%; display: grid; width: clamp(37px, 5vw, 54px); aspect-ratio: 1; place-content: center; background: #d9c1ef; border: 1px solid #795399; border-radius: 50%; color: #52376a; font-family: 'Patrick Hand', cursive; font-size: clamp(7px, .9vw, 10px); line-height: .9; text-align: center; transform: rotate(10deg); }
+
+.pretty-shop-footer { justify-content: space-between; gap: 8px; min-height: 16px; border-top: 1px solid rgba(74, 43, 105, .2); padding-top: 7px; color: #76558f; }
+.pretty-shop-footer i { flex: 1; height: 1px; background: rgba(74, 43, 105, .2); }
+
+.project-card:hover .pretty-product-card { transform: rotate(2deg) translateY(-3px); }
 
 .project-title-poster-04 {
   background: var(--charcoal);
