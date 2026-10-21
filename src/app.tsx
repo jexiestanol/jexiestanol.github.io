@@ -48,9 +48,10 @@ const activities = [
   },
   {
     number: '02',
-    title: 'Upcoming Activity',
-    description: 'A new web development experiment will be filed here.',
-    status: 'Coming soon',
+    title: 'Loadmap',
+    description: 'A JSON project',
+    href: 'https://github.com/jexiestanol/webdev/tree/main/WEBDEV-A2',
+    status: 'Published',
   },
   {
     number: '03',
