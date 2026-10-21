@@ -50,7 +50,7 @@ const activities = [
     number: '02',
     title: 'Loadmap',
     description: 'A JSON project',
-    href: 'https://github.com/jexiestanol/webdev/tree/main/WEBDEV-A2',
+    href: 'https://jexiestanol.github.io/webdev/WEBDEV-A2/',
     status: 'Published',
   },
   {
