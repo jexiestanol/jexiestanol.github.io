@@ -456,7 +456,7 @@ export default function App() {
         <section className="hero page-panel" aria-labelledby="hero-title">
           <div className="hero-topline">
             <span>Website Development</span>
-            <span>Portfolio · 2025</span>
+            <span>Portfolio · 2026</span>
           </div>
 
           <div className="hero-notebook">
@@ -505,10 +505,10 @@ export default function App() {
             <h3>The person behind the pixels</h3>
             <dl className="profile-list">
               <div><dt>Degree</dt><dd>BS Information Technology</dd></div>
-              <div><dt>School</dt><dd>Polytechnic University of the Philippines</dd></div>
+              <div><dt>School</dt><dd>Polytechnic University of the Philippines - Sto. Tomas</dd></div>
               <div><dt>Location</dt><dd>Tanauan City, Batangas</dd></div>
               <div><dt>Status</dt><dd>Open to internships &amp; opportunities</dd></div>
-              <div><dt>Interests</dt><dd>Web dev, UI/UX, photography, design</dd></div>
+              <div><dt>Interests</dt><dd>Web dev, UI/UX, Backend, design</dd></div>
             </dl>
             <div className="profile-stats">
               <span><b>3rd</b> year</span>
@@ -524,7 +524,7 @@ export default function App() {
               <SectionLabel>Selected works · 2024—2026</SectionLabel>
               <h2 id="projects-title">Project <em>archive</em></h2>
             </div>
-            <p>Four projects exploring systems, storytelling, visual design, and community.</p>
+            <p>Four projects exploring systems, backend, visual design, and community.</p>
           </header>
 
           <div className="project-grid">
