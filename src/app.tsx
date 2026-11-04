@@ -55,9 +55,10 @@ const activities = [
   },
   {
     number: '03',
-    title: 'Upcoming Activity',
-    description: 'Reserved for the next responsive design activity.',
-    status: 'Coming soon',
+    title: 'ToonVerse',
+    description: 'Midterm activity · Disney character explorer.',
+    href: '/activities/toonverse/',
+    status: 'Midterm',
   },
   {
     number: '04',
